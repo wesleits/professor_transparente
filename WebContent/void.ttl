@@ -1,0 +1,48 @@
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+
+
+:TopWikiLak a void:Dataset;
+a foaf:homepage <http://swlab.ic.uff.br/professor/>;
+dcterms:title "Professor Transparente"^^xsd:string ;
+dcterms:description "Cruza dados do lattes, com o site escavador, com o google e o portal da transparência."^^xsd:string;
+dcterms:creator :Student1;
+dcterms:creator :Student2;
+dcterms:subject https://github.com/wesleits/professor_transparente;
+void:dataDump <http://swlab.ic.uff.br/professor/dump>;
+void:sparqlEndpoint <http://swlab.ic.uff.br/professor/sparql>;
+void:vocabulary <http://swlab.ic.uff.br/2016/escavador-rdf/1.0/idioma#>;
+void:vocabulary <http://swlab.ic.uff.br/2016/escavador-rdf/1.0/formacao#>;
+void:vocabulary <http://swlab.ic.uff.br/2016/escavador-rdf/1.0/posdoutorado#>;
+void:vocabulary <http://swlab.ic.uff.br/2016/escavador-rdf/1.0/formacaoComplementar#>;
+void:vocabulary <http://swlab.ic.uff.br/2016/escavador-rdf/1.0/areadeatuacao#>;
+void:vocabulary <http://dbpedia.org/ontology/ResearchProject#>;
+void:vocabulary <http://swlab.ic.uff.br/2016/escavador-rdf/1.0/projeto#>;
+void:vocabulary <http://swlab.ic.uff.br/2016/escavador-rdf/1.0/premio#>;
+void:vocabulary <http://swlab.ic.uff.br/2016/escavador-rdf/1.0/atuacaoprofissional#>;
+void:vocabulary <http://dbpedia.org/ontology/City#>;
+void:vocabulary <http://swlab.ic.uff.br/2016/escavador-rdf/1.0/atuacaoprofissional#>;
+void:vocabulary <http://swlab.ic.uff.br/2016/escavador-rdf/1.0#>;
+void:propertyPartition [ void:property dc:title; ];
+void:propertyPartition [ void:property dc:creator; ];
+void:propertyPartition [ void:property skos:prefLabel; ];
+void:propertyPartition [ void:property owl:sameAs; ];
+void:propertyPartition [ void:property dc:subject; ];
+void:propertyPartition [ void:property prov:KeyValue; ];
+void:propertyPartition [ void:property prov:PairKey; ];
+
+:Student1 a foaf:Person;
+rdfs:label "Weslei Teixeira da Silveira;
+foaf:mbox <mailto:wesleiteixeira@ic.uff.br>;
+.
+
+:Student2 a foaf:Person;
+rdfs:label "Raíssa dos Santos Barcellos";
+foaf:mbox <rbarcellos@ic.uff.br>;
+.
